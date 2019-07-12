@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/fondo.css" />
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Polar Paradaise-Password</title>
+    </h:head>
+    <h:body>
+        <h:form id="frmContraseña" >
+              
+        <p:growl id="growl" sticky="true" showDetail="true"/>
+        <p:breadCrumb>
+            <p:menuitem value="Home"  url="template/principal.xhtml" />
+            <p:menuitem value="Iniciar Sesion"  url="template/loggint.xhtml" />
+            <p:menuitem value="Cambio de Contraseña" url="#" />
+            
+        </p:breadCrumb>
+        <p:separator />
+ 
+         <p:wizard flowListener="#{clienteFormBean.onFlowProcess}">
+            <p:tab id="identificacion" title="Paso 1"  >
+            <p:panel header="Ingrese su nombre de usuario">
+                <p:messages />
+                <h:panelGrid columns="1" columnClasses="label, value">
+                    <p:outputLabel id="lbl1" for="nombreUsuario" value="Nombre de Usuario: " />
+                    <p:inputText id="nombreUsuario" value="#{usuarioFormBean.nombreCambioContraseña}" />
+                </h:panelGrid>
+            </p:panel>
+            </p:tab>
+             <p:tab id="modificacion" title="Paso 2"  >
+            <p:panel header="Ingrese su nueva contraseña">
+                <p:messages />
+                <h:panelGrid columns="1" columnClasses="label, value">
+                    <p:outputLabel id="lbl2" value="Contraseña: " for="passwordUsuario" />
+                    <p:password id="passwordUsuario"
+                                value="#{usuarioFormBean.passCambiada}"
+                            feedback="true"
+                            />
+                </h:panelGrid>
+                <p:commandButton id="btnCambiar" value="Cambiar contraseña" update="frmContraseña" action="#{usuarioFormBean.cambiarContraseña()}" />
+            </p:panel>
+             </p:tab>
+          </p:wizard>
+        </h:form>
+    </h:body>
+</html>
+

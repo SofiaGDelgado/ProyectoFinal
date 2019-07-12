@@ -1,0 +1,134 @@
+#subody{
+    background-color: activecaption;
+    margin:0 auto;
+    width:980px;
+}
+
+#top {
+    position: relative;
+    background-color: white;
+    color:  #ece3a5;
+    padding: 8px;
+    margin: 0px 0px 10px 0px;
+    height:90px;
+}
+
+#logo{
+    float: left;
+    margin: 2px 5px;
+}
+
+#navegador ul{
+    float: right;
+    
+}
+
+#navegador ul li{
+    float: right;
+    
+}
+
+#navegador ul li:hover{
+border-bottom: 4px solid blueviolet; 
+
+}
+
+ul ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix{
+    clear: both;
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+#navegador ul li a{
+    border-left: 1px dashed azure;
+    color: lightpink;
+    float: left;
+    height: 15px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#navegador ul li a:hover{
+color:wheat; 
+}
+
+#bottom {
+    position: relative;
+    background-color:  midnightblue;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+#left {
+    float: left;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;
+}
+
+.left_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+#banner{
+height: 250px;
+margin: 20px;
+}
+
+#columnas{
+ border-top: 2px dashed azure;
+}
+.colum{
+  float: left;
+  margin-bottom: 20px;
+  width: 235px; 
+}
+.colum_titulo{
+  color: blueviolet;
+  font-size: 18px;
+  padding: 5px 20px;
+}
+
+.col png{
+    margin: 0 auto;
+    display: block;
+}
+
+#topname{
+    font-size: 28px;
+    color: purple;
+    float: left;
+    margin: 10px 20px;
+}
+
+
+
+
+

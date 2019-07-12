@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Polar Paradaise-Iniciar Sesion</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="subody">
+        <div id="top" class="top" >
+            <div id="logo" >
+                 <img src="../../resources/imagenes/logo1.PNG" width="490" height="95" />
+           </div>        
+            <div id="navegador">
+                 <ul> 
+                     <li><a href="loggint.xhtml">Iniciar Sesion</a></li> 
+                     <li><a href="quienesomo.xhtml">Quienes Somos?</a></li> 
+                     <li><a href="principal.xhtml">Inicio</a></li> 
+                </ul>
+            </div>
+        </div>
+        <div id="content" class="center_content">
+            <h:form id="login" >
+                <p:growl id="mensaje" showDetail="false" sticky="false"  />
+                <h:panelGrid id="tblIngreso" columns="2" cellpadding="5" >
+                    <p:outputLabel id="lbl1" for="nombreUsuario" value="Nombre de Usuario: " />
+                    <p:inputText id="nombreUsuario" required="true" value="#{loginFormBean.nombreUs}"/>
+                    <p:outputLabel id="lbl2" for="passwUsuario" value="Contraseña: "/>
+                    <p:password id="passwUsuario" required="true" value="#{loginFormBean.passUs}"/>
+                    <p:commandButton id="botonValidar" value="Ingresar" update="login" action="#{loginFormBean.validarUsuario()}"/>
+                    
+                </h:panelGrid>
+                
+                <h:panelGrid id="tblOpciones" columns="2" cellpadding="3" cellspacing="2" >
+                    
+                    <p:link outcome="/registro" value="Registrarse" />
+    
+                    <p:link outcome="/cambioContraseña" value="Cambiar contraseña"/>
+                        
+                </h:panelGrid>
+            </h:form>
+           
+        </div>
+        </div>
+        
+    </h:body>
+
+</html>

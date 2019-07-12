@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <p:panel id="pncompro">
+            
+            <p:growl id="msgs" showDetail="true">
+                <h:form id="frmcompro" enctype="multipart/form-data">
+                    <p:panelGrid id="tblcompro"
+                                 columns="5" >
+                        <p:dataTable id="tblcomproductos" value="#{productoFormBean.listaProductos}"
+                                     var="cadaProducto"  
+                                     emptyMessage="No hay productos " >
+                            <p:column headerText="Producto" >
+                                <p:outputLabel value="#{productoFormBean.unProducto.descripcion}" />
+                            </p:column>
+                            <p:column headerText="Categorias">
+                                <p:outputLabel value="#{productoFormBean.unProducto.categorias}" />
+                            </p:column>
+                            <p:column headerText="Precio">
+                                <p:outputLabel value="#{productoFormBean.unProducto.precio}" />
+                            </p:column>
+                            <p:column headerText="Cantidad">
+                                <p:outputLabel value="#{productoFormBean.unProducto.stock}" />
+                            </p:column>
+                            <p:column headerText="Total Producto">
+                                <p:outputLabel value="#{productoFormBean.unProducto.detalles}" />
+                            </p:column>
+                             <p:column headerText="Comprar">
+                                 <p:selectBooleanCheckbox id="seleccionar" >
+                                     <p:ajax listener="#{detalleFormBean.confirmarPago()}" />
+                                 </p:selectBooleanCheckbox>
+                            </p:column>
+                        </p:dataTable>
+                       
+                    </p:panelGrid>        
+                     <p:commandButton id="confirmarcompra" value="Pagar" oncomplete="PF('confirmarCompra').show()"
+                                         />
+                </h:form>
+            </p:growl>
+        </p:panel>
+    </h:body>
+</html>
+

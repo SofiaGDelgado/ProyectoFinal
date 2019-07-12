@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Polar Paradaise-HomePage</title>
+    </h:head>
+
+    <h:body >
+      <div id="subody">
+        <div id="top" class="top" >
+            <div id="logo" >
+                <img src="../../resources/imagenes/logo1.PNG" width="490" height="95" />
+                   
+            </div>
+            <div id="navegador">
+                 <ul> 
+                     <li><a href="principal.xhtml">Inicio</a></li> 
+                     <li><a href="quienesomo.xhtml">Quienes Somos?</a></li> 
+                     <li><a href="loggint.xhtml">Iniciar Sesion</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div id="content" class="center_content">
+            <div id="banner" >
+                <img src="../../resources/imagenes/intentomil.jpg"   width="930" height="267" />
+
+
+            </div>
+            <div id="columnas">
+                <div class="colum">
+                    <div class="colum_titulo">Palito de Agua</div>
+                    <img src="../../resources/imagenesdeprueba/paleta frutal.jpg" width="205" height="150"/>
+                    <p:commandButton value="Detalles" type="button"  onclick="PF('detalles1').show();" />
+                    
+                </div>
+                 <p:dialog id="det1" widgetVar="detalles1"
+                  header="Palito de Agua">
+                     <img src="../../resources/imagenesdeprueba/paleta frutal.jpg" width="205" height="150"/><br/>
+                     <h:outputText value="Sabores: Naranja, Frutilla, Limon, Uva, Cereza" /><br/>
+                     <h:outputText value="Cantidad: x12 "/><br/>
+                     <h:outputText value="Precio: $180"/><br/>
+                     <h:outputText value="*INICIAR SESION PARA COMPRAR*"/><br/>  
+                     <p:commandButton id="sesion1" value="Iniciar Sesion"  onclick="location='loggint.xhtml'" />
+                 </p:dialog>
+              <div class="colum">
+                    <div class="colum_titulo">Palito de Crema</div>
+                    <img src="../../resources/imagenesdeprueba/paleta de crema.jpg" width="205" height="150"/>
+                   <p:commandButton value="Detalles" type="button"  onclick="PF('detalles2').show();" />
+                    
+                    <p:dialog id="det2" widgetVar="detalles2"
+                  header="Palito de Crema">
+                    <img src="../../resources/imagenesdeprueba/paleta de crema.jpg" width="205" height="150"/><br/>
+                     <h:outputText value="Sabores: Frutilla, Cereza, Chocolate, Vainilla" /><br/>
+                     <h:outputText value="Cantidad: x12 "/><br/>
+                     <h:outputText value="Precio: $220"/><br/> 
+                     <h:outputText value="*INICIAR SESION PARA COMPRAR*"/><br/>  
+                     <p:commandButton id="sesion1" value="Iniciar Sesion"  onclick="location='loggint.xhtml'" />
+                 </p:dialog>
+                </div>
+                <div class="colum">
+                    <div class="colum_titulo"> Palito Relleno </div>
+                    <img src="../../resources/imagenesdeprueba/paleta rellena.jpg" width="205" height="150"/>
+                    <p:commandButton value="Detalles" type="button"  onclick="PF('detalles3').show();" />
+                    
+                 <p:dialog id="det3" widgetVar="detalles3"
+                  header="Palito de Crema">
+                    <img src="../../resources/imagenesdeprueba/paleta rellena.jpg" width="205" height="150"/><br/>
+                     <h:outputText value="Sabores: Frutilla, Kiwi, Leche Condensada, Mora, " /><br/>
+                     <h:outputText value="Sabor de Relleno: Nutella " /><br/>
+                     <h:outputText value="Cantidad: x12 "/><br/>
+                     <h:outputText value="Precio: $360"/><br/>            
+                     <h:outputText value="*INICIAR SESION PARA COMPRAR*"/><br/>  
+                     <p:commandButton id="sesion1" value="Iniciar Sesion"  onclick="location='loggint.xhtml'" />
+                 </p:dialog>
+                </div>
+                <div class="colum">
+                    <div class="colum_titulo">Palito Bombon</div>
+                    <img src="../../resources/imagenesdeprueba/paleta bonbom.jpg" width="205" height="150"/>
+                    <p:commandButton value="Detalles" type="button"  onclick="PF('detalles4').show();" />
+                   
+                 <p:dialog id="det4" widgetVar="detalles4"
+                  header="Palito de Crema">
+                    <img src="../../resources/imagenesdeprueba/paleta bonbom.jpg" width="205" height="150"/><br/>
+                     <h:outputText value="Sabores de Relleno: Frutilla, Vainilla y Crema Americana" /><br/>
+                     <h:outputText value="Cantidad: x12 "/><br/>
+                     <h:outputText value="Precio: $300"/><br/>    
+                     <h:outputText value="*INICIAR SESION PARA COMPRAR*"/><br/>  
+                     <p:commandButton id="sesion1" value="Iniciar Sesion"  onclick="location='loggint.xhtml'" />
+                 </p:dialog>
+                </div>
+              <div class="clearfix"></div>             
+            </div>
+        </div>
+     </div>
+
+                 
+    </h:body>
+
+</html>
